@@ -1,0 +1,51 @@
+/* circle.term{
+    display: inline-block;} */
+h1 {
+  font-family: 'Source Sans Pro';
+}
+
+a {
+  font-family: 'Source Sans Pro';
+}
+
+.chart {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+text {
+  font-size: 11px;
+}
+
+rect {
+  fill: none;
+}
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 11px;
+}
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.d3-tip{
+        position: absolute;
+        text-align: center;
+        padding: 2px;
+        font: 12px 'Source Sans Pro';
+        background: white;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
