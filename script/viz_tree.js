@@ -1,6 +1,6 @@
 var m = [20, 120, 20, 120],
     w = 1280 - m[1] - m[3],
-    h = 1800 - m[0] - m[2],
+    h = 2800 - m[0] - m[2],
     i = 0,
     root;
 
@@ -20,10 +20,15 @@ var tip_meaning = d3.tip({}) //ACA
         .attr('class', 'd3-tip')
         .offset([-10, 0])
         .html(function (d) {
-        return  d.meaning + "";
+        return d.meaning ? d.meaning : "";
     })
     vis.call(tip_meaning);
 
+var color_scale = d3.scale.linear()
+                    // .domain([d3.min(json, function(d) { return d.size; }),
+                    //         d3.max(json, function(d) { return d.size; })])
+                    .domain([1, 170])
+                    .range([0, 255]);
 
 
 d3.json("data/terms_meaning_hierarchy_sin-.json", function(json) {
@@ -70,6 +75,7 @@ function update(source) {
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
       .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+      // .style("fill", function(d) { return d._children ? "lightsteelblue" : "rgb(0, 0," + Math.round(d.count * 10) + ")"; });
 
   nodeEnter.append("svg:text")
       .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
@@ -88,6 +94,7 @@ function update(source) {
   nodeUpdate.select("circle")
       .attr("r", 4.5)
       .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+      // .style("fill", function(d) { return d._children ? "lightsteelblue" : "rgb(0, 0, " + Math.round(d)+")"; });
 
   nodeUpdate.select("text")
       .style("fill-opacity", 1);

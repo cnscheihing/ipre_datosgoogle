@@ -28,7 +28,7 @@ d3.json('data/terms_meaning_db_final.json', function(dataset) {
         .attr('r', function(d) {return Math.sqrt(d.count/3.1415)*10;})
         .attr('cy', 300)
         .attr('cx', function(d, i) {return i*15 + 50;})
-        .attr('fill', 'rgba(0, 0, 255, 0.75)')
+        .attr('fill', 'rgb(0, 0, 255, 0.75)')
         .attr('class', 'term');
         //.text(function(d) {return d.term;});
 

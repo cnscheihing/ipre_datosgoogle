@@ -1,0 +1,102 @@
+[{
+    "query": "no",
+    "count": 48,
+        "children": [
+            {
+                "query": "no tengo internet",
+                "count": 22
+            },
+            {
+                "query": "shingeki no kyojin",
+                "count": 3
+            },
+            {
+                "query": "no se porque",
+                "count": 2
+            },
+            {
+                "query": "busco lo que no se puede",
+                "count": 1
+            },
+            {
+                "query": "chao ojala no fracases nunca",
+                "count": 1
+            },
+            {
+                "query": "soy un terrorista no me arreiento de nada",
+                "count": 1
+            },
+            {
+                "query": "no es spam ",
+                "count": 1
+            },
+            {
+                "query": "no quiero fotos",
+                "count": 1
+            },
+            {
+                "query": "no se",
+                "count": 1
+            },
+            {
+                "query": "las computadoras no sirven jajajajja",
+                "count": 1
+            },
+            {
+                "query": "no entiendo nada",
+                "count": 1
+            },
+            {
+                "query": "please no more",
+                "count": 1
+            },
+            {
+                "query": "esto no tiene sentido",
+                "count": 1
+            },
+            {
+                "query": "ndreit no c va",
+                "count": 1
+            },
+            {
+                "query": "no aei",
+                "count": 1
+            },
+            {
+                "query": "no estaria entendiendo",
+                "count": 1
+            },
+            {
+                "query": "no hablen",
+                "count": 1
+            },
+            {
+                "query": "no les bolbere a ablar",
+                "count": 1
+            },
+            {
+                "query": "no me importa",
+                "count": 1
+            },
+            {
+                "query": "no tengop internet",
+                "count": 1
+            },
+            {
+                "query": "no yo soy luz jaja",
+                "count": 1
+            },
+            {
+                "query": "ser o no ser",
+                "count": 1
+            },
+            {
+                "query": "shingeki no kyogin",
+                "count": 1
+            },
+            {
+                "query": "yo no quiero ser",
+                "count": 1
+            }
+        ]
+  }]

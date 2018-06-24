@@ -57,9 +57,4 @@ d3.json('data/terms_meaning_db_final.json', function(data) {
              // "font-size": "3px"});
          .style("font-size", function(d){return (d.r)/2});
 
-  // for (var i = 0; i < data.length; i++) {
-  //   console.log(data[i].count);
-  //   console.log(data[i].value);
-  //   console.log(data[i].r);};
-
   });

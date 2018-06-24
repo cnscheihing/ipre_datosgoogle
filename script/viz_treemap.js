@@ -62,11 +62,12 @@ d3.json("data/terms_meaning_hierarchy_sin-.json", function(data) {
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
       .text(function(d) { return d.name; })
-      .style("opacity", function(d) { d.w = this.getComputedTextLength(); return d.dx > d.w ? 1 : 0; })
+      // .style("opacity", function(d) { return d.dx > d.w ? 1 : 0; })
+      // .style("font-size", function(d){ return d.dx/4; })
+      .style("font-size", function(d) { return Math.min(d.dx, d.dy)/4 + "px"; })
       .style({
              "fill":"white",
-             "font-family":"Source Sans Pro, Helvetica, Arial, san-serif"})
-      .style("font-size", function(d){return (d.dx)/4 > 11 ? (d.dx)/4 : 11});
+             "font-family":"Source Sans Pro, Helvetica, Arial, san-serif"});
 
   d3.select(window).on("click", function() { zoom(root); });
 
@@ -88,7 +89,9 @@ function zoom(d) {
   t.select("text")
       .attr("x", function(d) { return kx * d.dx / 2; })
       .attr("y", function(d) { return ky * d.dy / 2; })
-      .style("opacity", function(d) { return kx * d.dx > d.w ? 1 : 0; });
+      // .style("opacity", function(d) { return kx * d.dx > d.w ? 1 : 0; })
+      // .style("font-size", function(d){ return kx*d.dx/4; });
+      .style("font-size", function(d) { return Math.min(kx*d.dx, ky*d.dy)/4 + "px"; });
 
   node = d;
   d3.event.stopPropagation();
