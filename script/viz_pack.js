@@ -2,7 +2,7 @@
 // var HEIGHT = 1000;
 
 var diameter = 1500, //max size of the bubbles
-    color    = d3.scale.category20b(); //color category
+    color    = d3.scale.category20c(); //color category
 
 var bubble = d3.layout.pack()
     // .sort(function(a, b){return a.morphology[0].length - b.morphology[0].length;})
@@ -56,5 +56,6 @@ d3.json('data/terms_meaning_db_final.json', function(data) {
              "font-family":"Source Sans Pro, Helvetica, Arial, san-serif"})
              // "font-size": "3px"});
          .style("font-size", function(d){return (d.r)/2});
+         // .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; });
 
   });
